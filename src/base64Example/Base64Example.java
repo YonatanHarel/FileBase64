@@ -17,7 +17,7 @@ public class Base64Example {
 		byte[] bFileDecodeString = Base64.getDecoder().decode(fileString);
 
 		try {
-			fos = new FileOutputStream("readme_decoded.txt");
+			fos = new FileOutputStream("test_decoded.txt");
 			fos.write(bFileDecodeString);
 			fos.close();
 		} catch (IOException e) {
@@ -44,7 +44,7 @@ public class Base64Example {
 
 	public static void main (String args[]) {
 		String encodedFileStr;
-		File fileToEncode = new File("readme.txt");
+		File fileToEncode = new File("test.txt");
 
 		encodedFileStr = encode(fileToEncode);
 		System.out.println(encodedFileStr);
